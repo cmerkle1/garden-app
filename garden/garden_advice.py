@@ -1,8 +1,10 @@
-"""Issue one: remove hardcoded variable values
+"""Issue two: remove hardcoded variable values
 - Replaced season = "summer" variable and added user input
 - Replaced plant_type = "flower" variable and added user input"""
-season = input("Choose a season: winter or summer: ").lower()
-plant_type = input("Choose either flower or vegetable: ").lower()
+season = input("What season will you be planting? " \
+               "Enter 'winter' or 'summer': ").lower()
+plant_type = input("Choose between 'flower' " \
+                   "or 'vegetable': ").lower()
 
 # Variable to hold gardening advice
 advice = ""
@@ -17,26 +19,26 @@ else:
 
 # Determine advice based on the plant type
 if plant_type == "flower":
-    advice += "Use fertiliser to encourage blooms."
+    advice += "Use fertiliser to encourage blooms.\n"
 elif plant_type == "vegetable":
-    advice += "Keep an eye out for pests!"
+    advice += "Keep an eye out for pests!\n"
 else:
     advice += "No advice for this type of plant."
 
-"""Issue two: add plant recommendations based on
+"""Issue one: add plant recommendations based on
 season and plant type choices"""
 # Determine plant recommendation based on the season and plant type
 if plant_type == "flower" and season == "summer":
-    advice += "Summer flower recommendations: Sunflower, Azaleas,"
-    " and Peace Lillies"
+    advice += "Summer flower recommendations: Sunflower, Azaleas," \
+     " and Peace Lillies"
 elif plant_type == "flower" and season == "winter":
-    advice += "Winter flower recommendations: Snapdragons,"
-    " Hyacinth, and Witch Hazel"
+    advice += "Winter flower recommendations: Snapdragons," \
+     " Hyacinth, and Witch Hazel"
 elif plant_type == "vegetable" and season == "summer":
     advice += "Summer vegetable recommendations: Corn, Green Beans, Tomatoes"
 elif plant_type == "vegetable" and season == "winter":
-    advice += "Winter vegetable recommendations: Acorn Squash,"
-    " Sweet Potatoes, Turnips"
+    advice += "Winter vegetable recommendations: Acorn Squash," \
+     " Sweet Potatoes, Turnips"
 
 # Print the generated advice
 print(advice)
